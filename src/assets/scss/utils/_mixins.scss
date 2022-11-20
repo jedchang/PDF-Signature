@@ -1,0 +1,57 @@
+@mixin setTransition($time: 0.4s) {
+  transition: all $time 0s ease;
+}
+
+@mixin setBgImgLinearGradient($direction: right) {
+  background-image: linear-gradient(
+    to right,
+    #8169f1 0%,
+    #8169f1 30%,
+    #a44cee 73%,
+    #ff847f 100%
+  );
+}
+
+// RWD breakpoint
+@mixin extraSmall320 {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin extraSmall {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: 576px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin extraLarge {
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    @content;
+  }
+}
+
+// Bootstrap 5 add xxl
+@mixin extraExtraLarge {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}

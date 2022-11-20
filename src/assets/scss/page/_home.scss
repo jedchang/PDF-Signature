@@ -1,0 +1,362 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  @include medium {
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  @include small {
+    align-items: flex-start;
+    background-color: transparent;
+  }
+  @include extraSmall {
+    align-items: flex-start;
+    background-color: transparent;
+  }
+}
+
+.page-content {
+  position: relative;
+  z-index: 7;
+  padding: 0;
+  .align-items-center {
+    @include medium {
+      flex-direction: column-reverse;
+    }
+    @include small {
+      flex-direction: column-reverse;
+    }
+    @include extraSmall {
+      flex-direction: column-reverse;
+      padding: 0 10px;
+    }
+  }
+
+  .info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include medium {
+      align-items: center;
+      margin-bottom: 50px;
+    }
+    @include small {
+      align-items: center;
+      margin-bottom: 50px;
+    }
+    @include extraSmall {
+      align-items: flex-start;
+      margin-bottom: 50px;
+    }
+    .top-title {
+      @include extraSmall {
+        display: none;
+      }
+      img {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none !important;
+        vertical-align: middle;
+        @include setTransition;
+      }
+      h5 {
+        font-size: 18px;
+        font-family: 'Rubik', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        color: #a44cee;
+        display: inline-block;
+        margin: 0 10px;
+        @include extraSmall {
+          font-size: 4vmin;
+        }
+      }
+    }
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logo {
+        width: 77px;
+        margin-right: 10px;
+        @include large {
+          width: 67px;
+        }
+        @include small {
+          width: 77px;
+        }
+        @include extraSmall {
+          width: 17vmin;
+        }
+        @include extraSmall320 {
+          width: 15vmin;
+        }
+      }
+      h1 {
+        font-size: 42px;
+        font-weight: 600;
+        font-family: 'Rubik', Helvetica, Arial, sans-serif;
+        color: $secondaryTextColor;
+        @include large {
+          font-size: 34px;
+        }
+        @include medium {
+          font-size: 40px;
+        }
+        @include small {
+          font-size: 40px;
+        }
+        @include extraSmall {
+          font-size: 9vmin;
+          line-height: 1;
+        }
+        .text-gradient {
+          font-size: 52px;
+          font-weight: 700;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          @include setBgImgLinearGradient;
+          @include large {
+            font-size: 44px;
+          }
+          @include medium {
+            font-size: 44px;
+          }
+          @include small {
+            font-size: 50px;
+          }
+          @include extraSmall {
+            font-size: 11vmin;
+          }
+        }
+      }
+    }
+    .sub-title {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 20px;
+      @include extraSmall {
+        margin-bottom: 10px;
+      }
+      @include extraSmall320 {
+        margin-bottom: 15px;
+      }
+      h2 {
+        font-size: 42px;
+        font-weight: 600;
+        color: $secondaryTextColor;
+        margin: 0px;
+        @include large {
+          font-size: 36px;
+        }
+        @include small {
+          font-size: 40px;
+        }
+        @include extraSmall {
+          font-size: 8vmin;
+        }
+        span {
+          position: relative;
+          .subtitle-line {
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+          }
+          .subtitle-pen {
+            position: absolute;
+            left: 102%;
+            bottom: -5px;
+          }
+        }
+      }
+      p {
+        font-size: 18px;
+        font-weight: 600;
+        color: lighten($secondaryTextColor, 30%);
+        text-transform: uppercase;
+        margin: 30px 0;
+        width: 455px;
+        line-height: 1.5;
+        @include large {
+          font-size: 16px;
+          width: 406px;
+          margin: 20px 0;
+        }
+        @include small {
+          font-size: 16px;
+          width: 406px;
+          margin: 20px 0;
+        }
+        @include extraSmall {
+          font-size: 4.7vmin;
+          width: 100%;
+          margin: 25px 0;
+        }
+      }
+    }
+    a.btn-started {
+      padding: 17px 30px;
+      background: linear-gradient(180deg, #5747a0, #8169f1);
+      color: #fff;
+      border-radius: 30px;
+      position: relative;
+      text-align: center;
+      width: 250px;
+      @include medium {
+        padding: 20px 30px;
+        border-radius: 32px;
+        width: 470px;
+      }
+      @include small {
+        padding: 20px 30px;
+        border-radius: 32px;
+        width: 470px;
+      }
+      @include extraSmall {
+        padding: 18px 30px;
+        border-radius: 32px;
+        width: 92%;
+        margin: 0 auto;
+      }
+      @include extraSmall320 {
+        padding: 16px 30px;
+        border-radius: 32px;
+        width: 96%;
+        margin: 0 auto;
+      }
+      &:hover {
+        svg {
+          right: 60px;
+          @include medium {
+            right: 150px;
+          }
+          @include small {
+            right: 150px;
+          }
+          @include extraSmall {
+            right: 25%;
+          }
+          @include extraSmall320 {
+            right: 22%;
+          }
+        }
+      }
+      span {
+        margin-right: 15px;
+        @include medium {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        @include small {
+          font-size: 18px;
+          font-weight: 600;
+        }
+        @include extraSmall {
+          margin-right: 5%;
+          font-size: 5.5vmin;
+          font-weight: 600;
+        }
+        @include extraSmall320 {
+          margin-right: 9%;
+        }
+      }
+      svg {
+        position: absolute;
+        top: 15px;
+        right: 70px;
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+        color: #000;
+        background-color: #fff;
+        border-radius: 50%;
+        @include setTransition;
+        @include medium {
+          width: 30px;
+          height: 30px;
+          top: 18px;
+          right: 166px;
+        }
+        @include small {
+          width: 30px;
+          height: 30px;
+          top: 18px;
+          right: 166px;
+        }
+        @include extraSmall {
+          width: 30px;
+          height: 30px;
+          top: 18px;
+          right: 25%;
+        }
+        @include extraSmall320 {
+          top: 13px;
+          right: 22%;
+        }
+      }
+    }
+  }
+
+  .img {
+    position: relative;
+    @include medium {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    @include small {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    @include extraSmall {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    img.key-vision {
+      width: 90%;
+      @include medium {
+        width: 75%;
+      }
+      @include small {
+        width: 75%;
+      }
+      @include extraSmall {
+        width: 95%;
+      }
+    }
+    img.rocket {
+      position: absolute;
+      top: 45px;
+      right: -60px;
+      width: 180px;
+      animation: slideUpDown 1.7s ease-in-out infinite alternate both;
+      @include extraLarge {
+        right: -35px;
+      }
+      @include large {
+        right: -4px;
+        width: 125px;
+      }
+      @include medium {
+        right: 42px;
+        width: 160px;
+      }
+      @include small {
+        right: -3px;
+        width: 138px;
+      }
+      @include extraSmall {
+        top: 20px;
+        right: 1%;
+        width: 100px;
+      }
+    }
+  }
+}

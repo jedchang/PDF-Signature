@@ -1,0 +1,109 @@
+footer {
+  position: relative;
+  z-index: 2;
+  padding: 20px 0 0;
+  width: 100%;
+  .content {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    color: lighten($secondaryTextColor, 20%);
+    font-size: 14px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    @include large {
+      padding: 0 15px;
+    }
+    @include medium {
+      padding: 0 0;
+      flex-direction: column-reverse;
+    }
+    @include small {
+      padding: 0 5px;
+      flex-direction: column-reverse;
+    }
+    @include extraSmall {
+      padding: 0 5px;
+      flex-direction: column-reverse;
+    }
+  }
+  .copyright-text {
+    @include medium {
+      margin-bottom: 5px;
+    }
+    @include small {
+      margin-bottom: 5px;
+    }
+    @include extraSmall {
+      margin-bottom: 5px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    svg {
+      margin: 0 3px;
+    }
+    a {
+      font-family: 'Rubik', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      color: lighten($secondaryTextColor, 20%);
+      @include setTransition;
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+  ul.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    @include medium {
+      margin-bottom: 10px;
+      padding-left: 0;
+    }
+    @include small {
+      margin-bottom: 10px;
+      padding-left: 0;
+    }
+    @include extraSmall {
+      margin-bottom: 10px;
+      padding-left: 0;
+    }
+    li {
+      display: block;
+      margin-bottom: 2px;
+      margin-left: 10px;
+      @include extraSmall {
+        margin-left: 15px;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    a {
+      width: 46px;
+      height: auto;
+      border-radius: 100%;
+      color: lighten($secondaryTextColor, 20%);
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      @include setTransition(0.5s);
+      @include extraSmall {
+        width: 42px;
+        height: auto;
+      }
+      svg {
+        font-size: 22px;
+        @include extraSmall {
+          font-size: 26px;
+        }
+      }
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}

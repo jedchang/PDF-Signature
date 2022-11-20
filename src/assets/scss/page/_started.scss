@@ -1,0 +1,906 @@
+.started {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+section.page-wrapper {
+  margin: 21px 0 40px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(67, 54, 124, 0.4);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 15px 30px 20px;
+  @include medium {
+    width: 90%;
+    padding: 15px 15px 20px;
+  }
+  @include small {
+    width: 90%;
+    padding: 15px 15px 20px;
+  }
+  @include extraSmall {
+    width: 96%;
+    padding: 15px 0px 20px;
+    margin: 11px 0 10px;
+  }
+  @include extraSmall320 {
+    width: 96%;
+    padding: 15px 0px 20px;
+    margin: 11px 0 10px;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $secondaryTextColor;
+  }
+  .main-panel {
+    padding: 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    @include medium {
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    @include small {
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    @include extraSmall {
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+
+  .signature-block {
+    width: 300px;
+    padding-right: 30px;
+    border-right: 1px solid #dddddd;
+    @include extraLarge {
+      width: 260px;
+    }
+    @include large {
+      width: 230px;
+    }
+    @include medium {
+      width: 100%;
+      min-height: auto;
+      padding: 0;
+      border-right: none;
+    }
+    @include small {
+      width: 100%;
+      min-height: auto;
+      padding: 0;
+      border-right: none;
+    }
+    @include extraSmall {
+      width: 100%;
+      min-height: auto;
+      padding: 0;
+      border-right: none;
+    }
+    ul.menu-list {
+      height: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        &.brand-icon {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px 35px 15px;
+          margin-bottom: 38px;
+          a.brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+          img {
+            width: 70px;
+            height: auto;
+          }
+          span {
+            font-size: 24px;
+            font-weight: 600;
+            font-family: 'Roboto', Arial, Helvetica, sans-serif;
+            color: $primaryTextColor;
+            margin-left: 7px;
+            margin-top: 2px;
+          }
+        }
+        h3.title {
+          font-size: 22px;
+          font-weight: 600;
+          color: $secondaryTextColor;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 10px 0;
+          @include medium {
+            justify-content: center;
+            margin: 20px 0 10px;
+          }
+          @include small {
+            justify-content: center;
+            margin: 20px 0 10px;
+          }
+          @include extraSmall {
+            justify-content: center;
+            margin: 20px 0 10px;
+          }
+          svg {
+            margin-right: 8px;
+          }
+        }
+        .sign-display {
+          width: 100%;
+          margin: 15px 0;
+          @include medium {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+          }
+          @include small {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+          }
+          @include extraSmall {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+          }
+          .sign-item {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: #f6f7f8;
+            margin-bottom: 10px;
+            @include setTransition;
+            @include medium {
+              width: 31.3%;
+              display: flex;
+              flex-direction: column;
+              margin: 0 1% 20px;
+            }
+            @include small {
+              width: 31.3%;
+              display: flex;
+              flex-direction: column;
+              margin: 0 1% 20px;
+            }
+            @include extraSmall {
+              width: 31.3%;
+              display: flex;
+              flex-direction: column;
+              margin: 0 1% 20px;
+            }
+            &.show {
+              opacity: 1;
+              visibility: visible;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+            &:hover {
+              img.sign {
+                border: 1px solid $primaryColor;
+              }
+            }
+            img.sign {
+              width: 85%;
+              border: 1px solid #c9c9c9;
+              background-color: #fff;
+              @include setTransition;
+              @include medium {
+                width: 100%;
+              }
+              @include small {
+                width: 100%;
+              }
+              @include extraSmall {
+                width: 100%;
+              }
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+          .remove {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 47px 12px;
+            @include extraLarge {
+              padding: 38px 9px;
+            }
+            @include large {
+              padding: 32px 7px;
+            }
+            @include medium {
+              margin-left: 0;
+              padding: 14px 88px;
+            }
+            @include small {
+              margin-left: 0;
+              padding: 14px 57px;
+            }
+            @include extraSmall {
+              margin-left: 0;
+              padding: 14px 45px;
+            }
+            @include extraSmall320 {
+              margin-left: 0;
+              padding: 14px 36px;
+            }
+            &.disabled {
+              opacity: 0.3;
+              pointer-events: none;
+            }
+            &:hover {
+              svg {
+                color: darken($tertiaryTextColor, 10%);
+              }
+            }
+            svg {
+              font-size: 18px;
+              color: lighten($secondaryTextColor, 45%);
+              @include setTransition;
+              @include medium {
+                font-size: 18px;
+              }
+              @include small {
+                font-size: 16px;
+              }
+              @include extraSmall {
+                font-size: 16px;
+              }
+            }
+          }
+          .create-sign {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 15px 30px;
+            border: 0px solid rgba(129, 105, 241, 0.3);
+            background-color: rgba(129, 105, 241, 0.3);
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            color: $primaryColor;
+            @include setTransition;
+            @include medium {
+              width: 100%;
+              padding: 17px 17px;
+            }
+            @include small {
+              width: 100%;
+              padding: 17px 17px;
+            }
+            @include extraSmall {
+              width: 100%;
+              padding: 17px 17px;
+              font-size: 5.5vmin;
+            }
+            svg {
+              font-size: 22px;
+              margin-right: 5px;
+              @include medium {
+                font-size: 21px;
+              }
+              @include small {
+                font-size: 21px;
+              }
+              @include extraSmall {
+                font-size: 21px;
+              }
+            }
+            &:hover {
+              cursor: pointer;
+              color: #fff;
+              border: 0px solid $primaryColor;
+              background-color: $primaryColor;
+            }
+          }
+        }
+      }
+    }
+
+    #canvas-draw {
+      background-color: #fff;
+      border-radius: 10px;
+      position: relative;
+      border: 2px dashed #d2d2d7;
+      cursor: crosshair;
+    }
+    .cursor-pointer {
+      display: none;
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .canvas-panel {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .color-options {
+        width: 700px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 10px 0;
+        padding: 20px 30px;
+        background-color: #e6e1fc;
+        border-radius: 8px;
+        position: relative;
+        @include medium {
+          width: 100%;
+        }
+        @include small {
+          width: 100%;
+          padding: 15px 0;
+        }
+        @include extraSmall {
+          width: 100%;
+          padding: 15px 0;
+        }
+        img.hand-sign {
+          width: 213px;
+          height: auto;
+          position: absolute;
+          top: -93px;
+          left: 25px;
+          z-index: 1;
+          display: inline-block;
+          @include medium {
+            width: 198px;
+            top: -86px;
+            left: 35px;
+          }
+          @include small {
+            display: none;
+          }
+          @include extraSmall {
+            display: none;
+          }
+        }
+        .option-container {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 433px;
+          @include medium {
+            width: 375px;
+          }
+          @include small {
+            width: 85%;
+            margin: 0 auto;
+          }
+          @include extraSmall {
+            width: 85%;
+            margin: 0 auto;
+          }
+          button.option {
+            display: inline-block;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 3px solid #e6e1fc;
+            cursor: pointer;
+            @include setTransition;
+            &.active {
+              &.grey {
+                box-shadow: 0px 0px 0px 3px #323338;
+              }
+              &.green {
+                box-shadow: 0px 0px 0px 3px #139e35;
+              }
+              &.blue {
+                box-shadow: 0px 0px 0px 3px #0073ea;
+              }
+              &.red {
+                box-shadow: 0px 0px 0px 3px #d83a52;
+              }
+            }
+            &.grey {
+              background-color: #323338;
+            }
+            &.green {
+              background-color: #139e35;
+            }
+            &.blue {
+              background-color: #0073ea;
+            }
+            &.red {
+              background-color: #d83a52;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .upload-block {
+    width: 900px;
+    background-color: #fff;
+    border-radius: 12px;
+    color: $secondaryTextColor;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @include extraLarge {
+      width: 740px;
+    }
+    @include large {
+      width: 576px;
+    }
+    @include medium {
+      width: 100%;
+      padding: 0;
+      justify-content: flex-start;
+    }
+    @include small {
+      width: 100%;
+      padding: 0;
+      justify-content: flex-start;
+    }
+    @include extraSmall {
+      width: 100%;
+      padding: 0;
+      justify-content: flex-start;
+    }
+    .upload-body {
+      padding: 0px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      @include large {
+        padding: 0px 30px;
+      }
+      @include medium {
+        padding: 0;
+      }
+      @include small {
+        padding: 0;
+      }
+      @include extraSmall {
+        padding: 0;
+      }
+      .input-container {
+        width: calc(100% - 95px);
+        height: 415px;
+        margin: 45px 0 15px;
+        overflow: hidden;
+        padding: 40px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        background-color: #f6f7f8;
+        border: 2px dashed #d2d2d7;
+        border-radius: 10px;
+        @include medium {
+          width: 100%;
+          height: 400px;
+          margin: 15px 0 15px;
+          padding: 20px 20px;
+        }
+        @include small {
+          width: 100%;
+          height: 400px;
+          margin: 15px 0 15px;
+          padding: 20px 20px;
+        }
+        @include extraSmall {
+          width: 100%;
+          height: 400px;
+          margin: 5px 0 5px;
+          padding: 10px 10px;
+        }
+        @include extraSmall320 {
+          margin: 5px 0 5px;
+          padding: 10px 10px;
+        }
+        input.upload {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 400px;
+          cursor: pointer;
+          &:hover {
+            & + label.file-trigger {
+              background: linear-gradient(
+                180deg,
+                $secondaryColor,
+                $primaryColor
+              );
+              color: #fff;
+            }
+          }
+        }
+        label.file-trigger {
+          display: block;
+          width: 240px;
+          padding: 17px 45px;
+          border: 1px solid $primaryColor;
+          color: $primaryColor;
+          background-color: transparent;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: 16px;
+          transition: all 0.4s;
+          cursor: pointer;
+          z-index: 10;
+          @include setTransition;
+          @include medium {
+            width: 70%;
+            padding: 17px 45px;
+          }
+          @include small {
+            width: 90%;
+            padding: 17px 45px;
+          }
+          @include extraSmall {
+            width: 90%;
+            padding: 17px 45px;
+          }
+        }
+        .info {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-bottom: 35px;
+          svg {
+            font-size: 62px;
+            margin-bottom: 20px;
+            color: lighten($primaryColor, 20%);
+            @include small {
+              font-size: 52px;
+            }
+            @include extraSmall {
+              font-size: 62px;
+            }
+          }
+        }
+        .text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          p {
+            font-size: 20px;
+            font-weight: 600;
+            color: lighten($primaryColor, 10%);
+            margin: 0;
+            &:last-child {
+              margin-top: 5px;
+            }
+            @include large {
+              font-size: 18px;
+            }
+            @include small {
+              font-size: 18px;
+            }
+            @include extraSmall {
+              font-size: 4.5vmin;
+            }
+          }
+        }
+        .notice {
+          .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-size: 18px;
+            font-weight: 600;
+            color: lighten($primaryColor, 5%);
+            margin: 0;
+            animation: textFlash 1.5s linear infinite;
+            p {
+              margin: 0;
+              font-size: 26px;
+              @include extraSmall {
+                font-size: 6.5vmin;
+              }
+            }
+          }
+          svg {
+            font-size: 28px;
+            margin-right: 7px;
+          }
+        }
+        .file-name {
+          display: none;
+          &.show {
+            display: block;
+          }
+        }
+      }
+      img.sign-person {
+        position: absolute;
+        top: 56px;
+        right: -36px;
+        width: 210px;
+        @include large {
+          right: -29px;
+          width: 190px;
+        }
+        @include medium {
+          display: none;
+        }
+        @include small {
+          display: none;
+        }
+        @include extraSmall {
+          display: none;
+        }
+      }
+      img.file-person {
+        position: absolute;
+        top: 56px;
+        right: -20px;
+        width: 220px;
+        @include large {
+          right: -16px;
+          width: 200px;
+        }
+        @include medium {
+          display: none;
+        }
+        @include small {
+          display: none;
+        }
+        @include extraSmall {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .canvas-content {
+    width: 840px;
+    display: block;
+    margin: 85px 30px 30px;
+    position: relative;
+    border: 1px solid #dddddd;
+    @include extraLarge {
+      width: 680px;
+    }
+    @include large {
+      width: 516px;
+    }
+    @include medium {
+      width: 100%;
+      margin: 85px 0px 30px 0px;
+    }
+    @include small {
+      width: 100%;
+      padding: 0;
+      margin: 85px 0px 30px 0px;
+    }
+    @include extraSmall {
+      width: 100%;
+      margin: 85px 0px 30px 0px;
+    }
+    .canvas-options {
+      position: absolute;
+      top: -70px;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      @include extraSmall {
+        top: -88px;
+      }
+      .option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        border-radius: 10px;
+        background: #e9e9e9;
+        border: 1px solid #e9e9e9;
+        width: 33%;
+        @include setTransition;
+        &:hover {
+          border: 1px solid $primaryColor;
+        }
+        @include medium {
+          margin: 0 10px;
+        }
+        @include small {
+          margin: 0 5px;
+        }
+        @include extraSmall {
+          padding: 13px 15px;
+          margin: 0 5px;
+        }
+        &.zoom {
+          @include extraSmall {
+            width: 44%;
+          }
+          @include extraSmall320 {
+            width: 40%;
+          }
+          justify-content: space-evenly;
+          margin: 0 20px 0 0;
+          @include small {
+            margin: 0 10px 0 0;
+          }
+          @include extraSmall {
+            margin: 0 10px 0 0;
+          }
+        }
+        &.reset {
+          @include extraSmall {
+            width: 25%;
+          }
+          span {
+            @include small {
+              display: none;
+            }
+            @include extraSmall {
+              display: none;
+            }
+          }
+        }
+        &.date {
+          @include extraSmall {
+            width: 25%;
+          }
+          margin: 0 0 0 20px;
+          @include small {
+            margin: 0 0 0 10px;
+          }
+          @include extraSmall {
+            margin: 0 0 0 10px;
+          }
+          span {
+            @include small {
+              display: none;
+            }
+            @include extraSmall {
+              display: none;
+            }
+          }
+        }
+      }
+      .btn {
+        width: 100%;
+        padding: 12px 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include setTransition;
+        @include medium {
+          padding: 15px 15px;
+        }
+        @include small {
+          padding: 15px 15px;
+        }
+        @include extraSmall {
+          padding: 15px 15px;
+        }
+        @include extraSmall320 {
+          padding: 10px 10px;
+        }
+        &:hover {
+          color: $primaryColor;
+          svg.svg-inline--fa {
+            color: $primaryColor;
+          }
+        }
+        &.zoom-in {
+          width: 72px;
+        }
+        &.zoom-out {
+          width: 72px;
+        }
+
+        svg.svg-inline--fa {
+          font-size: 22px;
+          color: $primaryTextColor;
+          @include setTransition;
+          @include extraSmall {
+            font-size: 18px;
+          }
+        }
+        span {
+          margin-left: 7px;
+          font-weight: 600;
+        }
+      }
+      .zoom-size {
+        font-size: 16px;
+        font-family: 'Rubik', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        margin: 0;
+        width: 40px;
+        @include extraSmall {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .vld-overlay {
+      width: 595px;
+      background: rgb(255, 255, 255);
+      position: absolute;
+      left: 10px;
+      opacity: 1;
+    }
+    .canvas-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 465px;
+      overflow-y: scroll;
+      padding: 0;
+      position: relative;
+      @include extraLarge {
+        width: 100%;
+      }
+      @include small {
+        width: 100%;
+      }
+      @include extraSmall {
+        width: 100%;
+      }
+    }
+    /deep/ .canvas-container {
+      width: 100% !important;
+      height: auto !important;
+      object-fit: cover;
+      #canvas {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+      }
+      .upper-canvas {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+      }
+    }
+  }
+}
